@@ -1,0 +1,32 @@
+umod_tool.py by Pummelator
+CLI tool for viewing and extracting files from UMOD files
+Version []
+
+Usage:
+  python3 umod_tool.py [UMOD_PATH] [OPTION]
+
+UMOD_PATH: File path to the .umod or .ut2mod file. This tool should work for any UMODs for Unreal, UT99, UT2003 and '04. If no path is provided, help information will be printed.
+
+OPTION: Select an option from below to determine what the tool will do with the UMOD. If no option is given, the program will default to printing metadata and the file list (-fmeta)
+
+  -ex [OUT_PATH] : Extract the files to the specified directory. This will not extract the Manifest files, as those will cause errors when copied to a game installation.
+
+  -exall [OUT_PATH] : Extract the files to the specified directory. ONLY use this if the Manifest files are needed for some reason. Do NOT extract with this option directly to a game installation. This is intentionally not listed when umod_tool.py is run with no args.
+
+  -files : Print file list to the terminal.
+   [OUT_PATH] : Write the file list to the specified plain text file.
+
+  -fmeta : Print metadata about the UMOD file and the file list.
+   [OUT_PATH] : Write the metadata and file list to the specified plain text file.
+
+  -man : Print the Manifest.ini file to the terminal.
+   [OUT_PATH] : Write Manifest.ini to the specified directory.
+
+  -mant : Print the Manifest.int file to the terminal.
+   [OUT_PATH] : Write Manifest.int to the specified directory.
+
+  -man2 : Print both Manifest.ini and Manifest.int.
+   [OUT_PATH] : Write Manifest.ini and Manifest.int to the specified directory.
+
+  -meta : Print metadata about the UMOD file
+   [OUT_PATH] : Write the metadata to the specified plain text file
